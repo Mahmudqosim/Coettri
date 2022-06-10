@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 3003;
+const port = process.env.PORT || 3030;
 const middleware = require('./middleware')
 const path = require('path')
 const bodyParser = require("body-parser")
@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use(session({
-    secret: "bbq chips",
+    secret: process.env.SESSION_SECRET || "Harnessing Infinity",
     resave: true,
     saveUninitialized: false
 }))
