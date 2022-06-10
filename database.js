@@ -11,7 +11,7 @@ class Database {
     }
 
     connect() {
-        mongoose.connect("mongodb://localhost/coettri")
+        mongoose.connect(process.env.DB_HOST || "mongodb://localhost/coettri")
         .then(() => {
             console.log("database connection successful");
         })
