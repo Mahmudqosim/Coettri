@@ -905,8 +905,8 @@ button {
     position: absolute;
     z-index: 2;
     top: 3.75rem;
-    display: flex;
-    right: -50%;
+    display: none;
+    right: 0;
     height: fit-content;
     width: fit-content;
     padding: 1rem 1.15rem;
@@ -916,11 +916,10 @@ button {
     border-radius: 10px 0 0 10px;
     box-shadow: -3px 2px 5px rgba(0, 0, 0, 0.05);
     border: 1px solid var(--lightGrey);
-    transition: .3s ease-in-out;
   }
 
   .menu.active {
-    right: 0;
+    display: flex;
   }
 
   .mainSectionContainer {
